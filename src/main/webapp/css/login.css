@@ -1,0 +1,62 @@
+@charset "utf-8";
+@keyframes vibration{
+    from {
+        transform: rotate(3deg);
+    }
+    to {
+        transform: rotate(-3deg);
+    }
+}
+
+#login_wrap{
+    width: 100%;
+    height: 100%;
+    background:url("../images/login_background.jpg");
+}
+
+.error{
+    margin-left:800px;
+    height: 15px;
+    color:#ffffff;
+    padding:20px;
+    position:relative;
+    top:50px;
+    width: 150px;
+    height: 20px;
+}
+.vibration{
+    animation:vibration 0.1s 10;
+}
+
+.login_container{
+    margin-left:800px;
+    height: 22px;
+    padding:20px;
+    padding-top:70px;
+    box-sizing: border-box;
+}
+.login_container input{
+    width: 100px;
+    height: 20px;
+    text-indent: 10px;
+    margin-right:5px;
+    font-size:18px;
+}
+.login_container button{
+    width: 50px;
+    height: 21px;
+    font-size:18px;
+    position: relative;
+    top:1px;
+    box-shadow: 1px 1px 1px black;
+    transition-duration: 0.1s;
+}
+.login_container button:active{
+    margin-left:1px;
+    margin-top:1px;
+    box-shadow: 0.5px 0.5px 0.5px black;
+}
+.login_container button:hover{
+    background-color:#ff0066;
+    color:#ffffff;
+}

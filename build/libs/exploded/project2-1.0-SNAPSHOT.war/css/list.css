@@ -1,0 +1,108 @@
+@charset "utf-8";
+@keyframes vibration{
+    from {
+        transform: rotate(5deg);
+    }
+    to {
+        transform: rotate(-5deg);
+    }
+}
+
+body,h3,div,p,a,ul,li{
+    margin:0;
+    padding:0;
+    color:#ffffff;
+}
+body{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    background:url("../images/list_background.jpg");
+}
+a{
+    color:#ffffff;
+}
+
+#list_wrap{
+    position:absolute;
+    left:20%;
+    top:25%;
+}
+
+#list_container{
+    -ms-user-select: none;  -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+#list_container h3{
+    margin-bottom:20px;
+}
+.add_menu{
+    margin-bottom:20px;
+}
+.todo_list li{
+    width: 250px;
+}
+.todo_list li img {
+    cursor:pointer;
+}
+.add_menu li{
+    display: inline-block;
+    width: 50px;
+}
+
+.todo_list li:hover a{
+    color:red;
+}
+.board_list1{
+    margin-bottom:30px;
+}
+.sel{
+    text-decoration: line-through;
+    color:red;
+}
+.vibration{
+    animation:vibration 0.2s infinite;
+}
+.vibration2{
+    animation:vibration 0.1s infinite;
+}
+.vibration3{
+    animation:vibration 0.3s infinite;
+}
+
+.board_wrap{
+    position:absolute;
+    right:20%;
+    top:25%;
+}
+.nav{
+    cursor: pointer;
+}
+#board th,
+#board td{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#board tr td{
+    cursor: pointer;
+}
+#board tr:hover,
+.board_wrap p:hover a{
+    color:#333333;
+}
+.board_list2 textarea{
+    resize: none;
+    font-size: 20px;
+}
+.nav li {
+    font-size: 30px;
+}
+.nav ul a{
+    display: inline-block;
+    width: 10px;
+    margin-left: 20px;
+}
+.sel2{
+    color:#333333;
+}
+

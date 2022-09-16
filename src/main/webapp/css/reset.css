@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+*{
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+body,div,p,form,input,button,h3,ul,li,textarea{
+    margin:0;
+    padding:0;
+}
+body{
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 1.5em;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input,button,textarea{
+    outline: none;
+    border: none;
+}
