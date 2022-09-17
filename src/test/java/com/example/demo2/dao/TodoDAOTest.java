@@ -19,6 +19,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class TodoDAOTest {
 
     @Test
+    public void loginTest() throws SQLException {
+        String sql= "select * from todo.user where id=?";
+        Connection conn = ConnectionUtil.INSTANCE.getConnection();
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,"skagus");
+        ResultSet rs = pstmt.executeQuery();
+        rs.next();
+        System.out.println(rs.getString(1)+" , "+rs.getString(2));
+    }
+
+    @Test
     void selectAllFromList() throws SQLException {
         String sql = "select * from list";
         Connection conn = ConnectionUtil.INSTANCE.getConnection();

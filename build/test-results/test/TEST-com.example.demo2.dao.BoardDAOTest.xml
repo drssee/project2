@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.demo2.dao.BoardDAOTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-17T02:27:45" hostname="gimnamhyeon-ui-MacBookAir.local" time="0.226">
+  <properties/>
+  <testcase name="insertTest()" classname="com.example.demo2.dao.BoardDAOTest" time="0.226"/>
+  <system-out><![CDATA[11:27:45.322 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:27:45.512 [Test worker] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@289778cd
+11:27:45.513 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

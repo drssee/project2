@@ -47,6 +47,7 @@ public class LoginController extends HttpServlet {
                 resp.sendRedirect("/todo/list");
             }
         } catch (Exception e) {
+            e.printStackTrace();
             resp.sendRedirect("/todo/login?error=id error");
         }
     }

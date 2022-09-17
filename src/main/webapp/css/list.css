@@ -52,9 +52,23 @@ a{
 .todo_list li:hover a{
     color:red;
 }
+#board{
+    width: 350px;
+}
+#board th{
+    position: relative;
+    right:25px;
+}
+#board th:not(th:last-child){
+    margin-right: 20px;
+}
 .board_list1{
     margin-bottom:30px;
 }
+/*.board_list2 a{*/
+/*    position: relative;*/
+/*    left:20px;*/
+/*}*/
 .sel{
     text-decoration: line-through;
     color:red;
@@ -77,6 +91,11 @@ a{
 .nav{
     cursor: pointer;
 }
+
+.add_menu2{
+    margin-left:20px;
+}
+
 #board th,
 #board td{
     font-size: 25px;

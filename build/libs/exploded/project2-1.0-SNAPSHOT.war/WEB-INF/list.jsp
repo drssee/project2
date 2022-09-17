@@ -50,7 +50,7 @@
 </div>
 <div class="board_wrap">
     <p class="add_menu2">
-        <a href="#">추가</a>
+        <a href="/board/write">추가</a>
     </p>
     <table id="board">
         <tr>
@@ -72,9 +72,11 @@
             </tr>
             <tr class="board_list2">
                 <td colspan="3">
-                    <textarea cols="45" rows="10" readonly class="content">${boardDto.content}</textarea>
-                    <a href="/todo/board/modify?bno=${boardDto.bno}&content=${boardDto.content}" class="btn_1">수정</a>
-                    <a href="/todo/board/delete?bno=${boardDto.bno}" class="btn_2" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+                    <textarea cols="20" rows="10" readonly class="content">${boardDto.content}</textarea>
+                    <div>
+                        <a href="/board/modify?bno=${boardDto.bno}&content=${boardDto.content}" class="btn_1">수정</a>
+                        <a href="/board/delete?bno=${boardDto.bno}" class="btn_2" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+                    </div>
                 </td>
             </tr>
         </c:forEach>

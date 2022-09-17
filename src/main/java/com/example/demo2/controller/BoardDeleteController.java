@@ -14,12 +14,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
-@WebServlet(name="boardRemoveController",value="/todo/board/delete")
+@WebServlet(name="boardRemoveController",value="/board/delete")
 @Log4j2
 public class BoardDeleteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.info("/todo/board/delte (get) ............");
+        log.info("/board/delete (get) ............");
         Integer bno = Integer.parseInt(req.getParameter("bno"));
         try {
             BoardServiceUtil.INSTANCE.get().delete(bno);

@@ -27,4 +27,8 @@ public class BoardService {
     public int delete(Integer bno) throws SQLException{
         return boardDAO.delete(bno);
     }
+
+    public int insert(String title,String content,String writer) throws SQLException {
+        return boardDAO.insert(title,content,writer);
+    }
 }

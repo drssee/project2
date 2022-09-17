@@ -6,10 +6,7 @@ import com.example.demo2.util.ConnectionUtil;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,6 +65,20 @@ class BoardDAOTest {
                 "where bno = 14;";
         Connection conn = ConnectionUtil.INSTANCE.getConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql);
+        int rowCnt = pstmt.executeUpdate();
+        pstmt.close();
+        conn.close();
+    }
+
+    @Test
+    public void insertTest() throws Exception{
+        String sql = "insert into board (title, content, writer)\n" +
+                "values (?,?,?);";
+        Connection conn = ConnectionUtil.INSTANCE.getConnection();
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,"title");
+        pstmt.setString(2,"content");
+        pstmt.setString(3,"writer");
         int rowCnt = pstmt.executeUpdate();
         pstmt.close();
         conn.close();

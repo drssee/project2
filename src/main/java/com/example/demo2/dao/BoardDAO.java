@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Log4j2
@@ -88,6 +89,21 @@ public class BoardDAO {
         Connection conn = ConnectionUtil.INSTANCE.getConnection();
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1,bno);
+        int rowCnt = pstmt.executeUpdate();
+        pstmt.close();
+        conn.close();
+        return rowCnt;
+    }
+
+    //등록
+    public int insert(String title,String content,String writer) throws SQLException {
+        String sql = "insert into board (title, content, writer)\n" +
+                "values (?,?,?);";
+        Connection conn = ConnectionUtil.INSTANCE.getConnection();
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,title);
+        pstmt.setString(2,content);
+        pstmt.setString(3,writer);
         int rowCnt = pstmt.executeUpdate();
         pstmt.close();
         conn.close();
