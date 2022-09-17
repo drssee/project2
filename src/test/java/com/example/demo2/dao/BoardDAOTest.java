@@ -1,10 +1,13 @@
 package com.example.demo2.dao;
 
+import com.example.demo2.domain.BoardVO;
 import com.example.demo2.dto.BoardDTO;
 import com.example.demo2.dto.PageRequestDTO;
 import com.example.demo2.util.ConnectionUtil;
+import com.example.demo2.util.MapperUtil;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
+import org.modelmapper.ModelMapper;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,6 +15,7 @@ import java.util.List;
 
 @Log4j2
 class BoardDAOTest {
+    ModelMapper modelMapper = MapperUtil.INSTANCE.get();
 
     @Test
     void insert() throws SQLException {

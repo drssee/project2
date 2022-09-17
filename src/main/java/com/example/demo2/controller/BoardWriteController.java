@@ -1,5 +1,6 @@
 package com.example.demo2.controller;
 
+import com.example.demo2.dto.BoardDTO;
 import com.example.demo2.dto.TodoDTO;
 import com.example.demo2.util.BoardServiceUtil;
 import com.example.demo2.util.TodoServiceutil;
@@ -32,8 +33,14 @@ public class BoardWriteController extends HttpServlet {
         TodoDTO todoDTO = (TodoDTO) session.getAttribute("loginInfo");
         String writer = todoDTO.getId();
 
+        BoardDTO boardDTO = BoardDTO.builder()
+                .title(title)
+                .content(content)
+                .writer(writer)
+                .build();
+
         try {
-            BoardServiceUtil.INSTANCE.get().insert(title,content,writer);
+            BoardServiceUtil.INSTANCE.get().insert(boardDTO);
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException(e);

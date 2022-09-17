@@ -74,7 +74,7 @@
                 <td colspan="3">
                     <textarea cols="20" rows="10" readonly class="content">${boardDto.content}</textarea>
                     <div>
-                        <a href="/board/modify?bno=${boardDto.bno}&content=${boardDto.content}" class="btn_1">수정</a>
+                        <a href="/board/modify?bno=${boardDto.bno}&writer=${boardDto.writer}" class="btn_1">수정</a>
                         <a href="/board/delete?bno=${boardDto.bno}" class="btn_2" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
                     </div>
                 </td>

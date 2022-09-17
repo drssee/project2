@@ -28,18 +28,18 @@ $(document).ready(function(){
         $(this).css("color","");
     });
 
-    $(".btn_1").click(function(){
-        if($(".content").attr("readonly")==null){
-            // $(this).attr("href",content);
-            return true;
-        }
+    // $(".btn_1").click(function(){
+    //     if($(".content").attr("readonly")==null){
+    //         // $(this).attr("href",content);
+    //         return true;
+    //     }
+    //
+    //     $(".content").removeAttr("readonly");
+    //     $(this).html("전송");
+    //     return false;
+    // });
 
-        $(".content").removeAttr("readonly");
-        $(this).html("전송");
-        return false;
-    });
-
-    $(".btn_2").mouseover(function(){
+    $(".btn_1,.btn_2").mouseover(function(){
        $(this).css("color","#333333");
     }).mouseout(function(){
         $(this).css("color","");

@@ -58,6 +58,7 @@ public class TodoRegister extends HttpServlet {
                 out.flush();
             }
         } catch (SQLException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         } catch (Exception n){
             n.printStackTrace();
